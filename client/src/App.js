@@ -30,10 +30,6 @@ const AuthContextProvider = ({ children }) => {
     try {
       const { data } = await axios.get(`${serverUrl}/auth/logged_in`);
 
-      console.log('RESULT: ', data);
-
-      return;
-
       const { loggedIn: logged_in, user } = data;
 
       setLoggedIn(logged_in);
